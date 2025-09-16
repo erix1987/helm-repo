@@ -1,0 +1,222 @@
+apiVersion: v1
+entries:
+  cert-manager:
+  - annotations:
+      artifacthub.io/category: security
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/prerelease: "false"
+      artifacthub.io/signKey: |
+        fingerprint: 1020CF3C033D4F35BAE1C19E1226061C665DF13E
+        url: https://cert-manager.io/public-keys/cert-manager-keyring-2021-09-20-1020CF3C033D4F35BAE1C19E1226061C665DF13E.gpg
+    apiVersion: v2
+    appVersion: v1.18.2
+    created: "2025-09-16T13:13:07.464831399+02:00"
+    description: A Helm chart for cert-manager
+    digest: daddf7af7b1f0eaaa10edd790aefa0bd8c2b07830febf659460d843217f5b3c5
+    home: https://cert-manager.io
+    icon: https://raw.githubusercontent.com/cert-manager/community/4d35a69437d21b76322157e6284be4cd64e6d2b7/logo/logo-small.png
+    keywords:
+    - cert-manager
+    - kube-lego
+    - letsencrypt
+    - tls
+    kubeVersion: '>= 1.22.0-0'
+    maintainers:
+    - email: cert-manager-maintainers@googlegroups.com
+      name: cert-manager-maintainers
+      url: https://cert-manager.io
+    name: cert-manager
+    sources:
+    - https://github.com/cert-manager/cert-manager
+    urls:
+    - https://erix1987.github.io/helm-repo/charts/cert-manager-v1.18.2.tgz
+    version: v1.18.2
+  erpnext:
+  - apiVersion: v2
+    appVersion: v15.78.1
+    created: "2025-09-16T13:13:07.47436717+02:00"
+    dependencies:
+    - alias: redis-cache
+      condition: redis-cache.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.15.2
+    - alias: redis-queue
+      condition: redis-queue.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.15.2
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.5.7
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.6
+    description: Kubernetes Helm Chart for the latest stable ERPNext branch
+    digest: f3443b0ac8c017bccfc6d1175cbf9fd7b921c0b96b81880283e3069f5559ee53
+    icon: https://raw.githubusercontent.com/frappe/erpnext/develop/erpnext/public/images/erpnext-logo.png
+    name: erpnext
+    type: application
+    urls:
+    - https://erix1987.github.io/helm-repo/charts/erpnext-7.0.232.tgz
+    version: 7.0.232
+  longhorn:
+  - apiVersion: v1
+    appVersion: v1.9.1
+    created: "2025-09-16T13:13:07.476022177+02:00"
+    description: Longhorn is a distributed block storage system for Kubernetes.
+    digest: bd63fb5a464e38893047eb7586cae80187396d2f104c0d768860b50616fb20a5
+    home: https://github.com/longhorn/longhorn
+    icon: https://raw.githubusercontent.com/cncf/artwork/master/projects/longhorn/icon/color/longhorn-icon-color.png
+    keywords:
+    - longhorn
+    - storage
+    - distributed
+    - block
+    - device
+    - iscsi
+    - nfs
+    kubeVersion: '>=1.25.0-0'
+    maintainers:
+    - email: maintainers@longhorn.io
+      name: Longhorn maintainers
+    name: longhorn
+    sources:
+    - https://github.com/longhorn/longhorn
+    - https://github.com/longhorn/longhorn-engine
+    - https://github.com/longhorn/longhorn-instance-manager
+    - https://github.com/longhorn/longhorn-share-manager
+    - https://github.com/longhorn/longhorn-manager
+    - https://github.com/longhorn/longhorn-ui
+    - https://github.com/longhorn/longhorn-tests
+    - https://github.com/longhorn/backing-image-manager
+    urls:
+    - https://erix1987.github.io/helm-repo/charts/longhorn-1.9.1.tgz
+    version: 1.9.1
+  metallb:
+  - apiVersion: v2
+    appVersion: v0.15.2
+    created: "2025-09-16T13:13:07.477425137+02:00"
+    dependencies:
+    - condition: crds.enabled
+      name: crds
+      repository: ""
+      version: 0.15.2
+    - condition: frrk8s.enabled
+      name: frr-k8s
+      repository: https://metallb.github.io/frr-k8s
+      version: 0.0.20
+    description: A network load-balancer implementation for Kubernetes using standard
+      routing protocols
+    digest: 4f0fc313cd97819a1c78fff0a389dfe1c9f98bc490f33f521317475df1d7b873
+    home: https://metallb.universe.tf
+    icon: https://metallb.universe.tf/images/logo/metallb-white.png
+    kubeVersion: '>= 1.19.0-0'
+    name: metallb
+    sources:
+    - https://github.com/metallb/metallb
+    type: application
+    urls:
+    - https://erix1987.github.io/helm-repo/charts/metallb-0.15.2.tgz
+    version: 0.15.2
+  traccar:
+  - apiVersion: v2
+    appVersion: "5.10"
+    created: "2025-09-16T13:13:07.482253987+02:00"
+    dependencies:
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.4.8
+    - condition: redis-ha.enabled
+      name: redis-ha
+      repository: https://dandydeveloper.github.io/charts
+      version: 4.23.0
+    description: A Helm chart for Traccar GPS Server
+    digest: 424efd08cce89df5c9b3a3f944150e7d443f45ce33ace8575c7915e3a62a5659
+    maintainers:
+    - email: laszlo.kondas@gmail.com
+      name: kondas
+    name: traccar
+    type: application
+    urls:
+    - https://erix1987.github.io/helm-repo/charts/traccar-1.9.0.tgz
+    version: 1.9.0
+  traefik:
+  - annotations:
+      artifacthub.io/changes: "- \"feat(hub): allow to specify admission controller
+        certificate from existing secret\"\n- \"feat(deps): update traefik docker
+        tag to v3.5.2\"\n- \"feat(accesslog): ✨ add genericCLF format\"\n- \"chore(release):
+        \U0001F680 publish v37.1.1\"\n"
+    apiVersion: v2
+    appVersion: v3.5.2
+    created: "2025-09-16T13:13:07.489447503+02:00"
+    description: A Traefik based Kubernetes ingress controller
+    digest: 692b413f878cb4b3554921ea5bbac113aa128cf89aec4b15cdd39478615a8656
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/master/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik
+    sources:
+    - https://github.com/traefik/traefik-helm-chart
+    - https://github.com/traefik/traefik
+    type: application
+    urls:
+    - https://erix1987.github.io/helm-repo/charts/traefik-37.1.1.tgz
+    version: 37.1.1
+  zammad:
+  - apiVersion: v2
+    appVersion: 6.5.1
+    created: "2025-09-16T13:13:07.50599107+02:00"
+    dependencies:
+    - condition: zammadConfig.elasticsearch.enabled
+      name: elasticsearch
+      repository: https://charts.bitnami.com/bitnami
+      version: 21.6.3
+    - condition: zammadConfig.minio.enabled
+      name: minio
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.10.5
+    - condition: zammadConfig.memcached.enabled
+      name: memcached
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.9.3
+    - condition: zammadConfig.postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.7.21
+    - condition: zammadConfig.redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.13.4
+    description: Zammad is a web based open source helpdesk/customer support system
+      with many features to manage customer communication via several channels like
+      telephone, facebook, twitter, chat and e-mails.
+    digest: 93fbba53b0190b4128b2df0e347b55c375bccd421f256073e483b5672a4989b6
+    home: https://zammad.org
+    icon: https://raw.githubusercontent.com/zammad/zammad-documentation/main/images/zammad_logo_600x520.png
+    maintainers:
+    - email: monotek23@gmail.com
+      name: monotek
+    - email: enjoy@zammad.com
+      name: mgruner
+    name: zammad
+    sources:
+    - https://github.com/zammad/zammad
+    - https://github.com/zammad/zammad-helm
+    urls:
+    - https://erix1987.github.io/helm-repo/charts/zammad-15.2.1.tgz
+    version: 15.2.1
+generated: "2025-09-16T13:13:07.46035773+02:00"
